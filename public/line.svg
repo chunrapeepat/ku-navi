@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="97 883 22 366">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(0,0,0,0.23);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #006664;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <g id="Group_297" data-name="Group 297" transform="translate(-40)">
+    <circle id="Ellipse_10" data-name="Ellipse 10" class="cls-1" cx="11" cy="11" r="11" transform="translate(137 931)"/>
+    <line id="Line_2" data-name="Line 2" class="cls-2" y2="86" transform="translate(148 961)"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" class="cls-1" cx="11" cy="11" r="11" transform="translate(137 1055)"/>
+    <line id="Line_3" data-name="Line 3" class="cls-2" y2="86" transform="translate(148 1085)"/>
+    <circle id="Ellipse_12" data-name="Ellipse 12" class="cls-1" cx="11" cy="11" r="11" transform="translate(137 1179)"/>
+    <g id="Group_288" data-name="Group 288" transform="translate(0 -46)">
+      <line id="Line_4" data-name="Line 4" class="cls-2" y2="10" transform="translate(148 1255)"/>
+      <line id="Line_5" data-name="Line 5" class="cls-2" y2="10" transform="translate(148 1270)"/>
+      <line id="Line_6" data-name="Line 6" class="cls-2" y2="10" transform="translate(148 1285)"/>
+    </g>
+    <g id="Group_289" data-name="Group 289" transform="translate(0 -372)">
+      <line id="Line_4-2" data-name="Line 4" class="cls-2" y2="10" transform="translate(148 1255)"/>
+      <line id="Line_5-2" data-name="Line 5" class="cls-2" y2="10" transform="translate(148 1270)"/>
+      <line id="Line_6-2" data-name="Line 6" class="cls-2" y2="10" transform="translate(148 1285)"/>
+    </g>
+  </g>
+</svg>

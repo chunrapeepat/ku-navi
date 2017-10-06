@@ -43,7 +43,7 @@ export default class extends Component {
       <div>
         <SearchInput
           onClick={() => this.openBackground()}
-          placeholder='ค้นหาสถานที่อื่นๆ...'/>
+          placeholder='ค้นหาสถานที่...'/>
         <Background
           onClick={() => this.closeBackground()}
           display={this.state.display}/>
