@@ -27,7 +27,7 @@ const FooterContainer = styled.div`
   font-size: 18px;
   text-align: center;
   position: fixed;
-  z-index: 999;
+  z-index: 9999999;
   bottom: 0;
   background: #006664;
   cursor: pointer;
