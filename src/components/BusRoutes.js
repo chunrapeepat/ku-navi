@@ -2,9 +2,9 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import Ink from 'react-ink'
 
-const Padding = styled.div`
-  padding: 20px;
-`
+import {Padding, Heading} from '../helper'
+import BusCard from './BusCard'
+import BusRoutesJSON from '../database/bus_routes.json'
 
 const Container = styled.div`
   position: fixed;
@@ -14,6 +14,9 @@ const Container = styled.div`
   background: white;
   overflow-y: scroll;
   transition: 0.5s;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #000000, #434343);
+  background: linear-gradient(to right, #000000, #434343);
 `
 
 const FooterContainer = styled.div`
@@ -47,12 +50,15 @@ export default class extends Component {
       <div>
         <Container style={{bottom: (this.state.open) ? '47px' : '-100vh'}}>
           <Padding>
-            What the hecl
+            <Heading color="white">เส้นทางรถตะลัยทั้งหมด</Heading>
+            {BusRoutesJSON.map((bus, i) => {
+              return <BusCard no={bus.line} routes={bus.routes} key={i}/>
+            })}
           </Padding>
         </Container>
         <FooterContainer onClick={() => this.toggleBusRoutes()}>
           <Ink />
-          ดูเส้นทางรถตะลัยทั้งหมด
+          {this.state.open ? 'คลิกที่นี่เพื่อปิดหน้าต่าง' : 'ดูเส้นทางรถตะลัยทั้งหมด'}
         </FooterContainer>
       </div>
     )
