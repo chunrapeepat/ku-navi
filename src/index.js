@@ -18,9 +18,9 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        <BusRoutes />
         <SearchContainer />
         <InformationContainer />
-        <BusRoutes />
       </div>
     )
   }
