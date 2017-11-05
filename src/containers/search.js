@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
-import {Padding} from '../helper'
+import {Padding, searchLocation} from '../helper'
 import LocationCard from '../components/LocationCard'
 
 const SearchInput = styled.input`
@@ -29,6 +29,13 @@ const Background = styled.div`
   display: ${props => (props.display) ? 'block' : 'none'};
 `
 
+const SearchNotFoundLabel = styled.div`
+  font-size: 20px;
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+`
+
 export default class extends Component {
   constructor() {
     super()
@@ -47,11 +54,14 @@ export default class extends Component {
           placeholder='ค้นหาสถานที่...'/>
         <Background display={this.state.search !== ''}>
           <Padding>
-            <LocationCard />
-            <LocationCard />
-            <LocationCard />
-            <LocationCard />
-            <LocationCard />
+            {searchLocation(this.state.search).length === 0 &&
+              <SearchNotFoundLabel>ไม่พบผลการค้นหา</SearchNotFoundLabel>
+            }
+            {searchLocation(this.state.search).length > 0 &&
+              searchLocation(this.state.search).map((x, i) => {
+                return <LocationCard data={x} key={i}/>
+              })
+            }
           </Padding>
         </Background>
       </div>

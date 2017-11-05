@@ -61,11 +61,14 @@ const OpenInGoogleMap = styled.div`
 export default (props) => (
   <Container>
     <Padding>
-      <Heading>โรงอาหารกลาง (บาร์ใหม่กว่า)</Heading>
+      <Heading>{props.data.title}</Heading>
       <DescriptionLabel>ระยะทางประมาณ 300 เมตร</DescriptionLabel>
-      <BusLabel>สาย 1,4</BusLabel>
+      <BusLabel>สาย {props.data.bus}</BusLabel>
       <OpenInGoogleMap>
-        <a><Ink /> เปิดด้วย Google Maps</a>
+        <a rel="noopener noreferrer"
+           target='_blank'
+           href={`https://www.google.com/maps/place/${props.data.gmaps}/@${props.data.location.lat},${props.data.location.lng},50z`}>
+           <Ink /> เปิดด้วย Google Maps</a>
       </OpenInGoogleMap>
     </Padding>
   </Container>
