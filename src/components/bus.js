@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
+import {getBusPath} from '../helper'
 
 const Container = styled.div`
   padding: 10px 20px;
@@ -35,13 +36,14 @@ const BusList = styled.div`
 
 export default class extends Component {
   render(){
+    const path = getBusPath(this.props.data.line, this.props.data.index)
     return(
       <Container>
-        <Heading><I className="zmdi zmdi-bus"></I> รถตะลัยสาย 1</Heading>
+        <Heading><I className="zmdi zmdi-bus"></I> รถตะลัยสาย {this.props.data.line}</Heading>
         <LineSvg height="150" src="/line.svg"/>
-        <BusList active>ศาลาที่พักหกเหลี่ยม</BusList>
-        <BusList>ศาลาที่พักหกเหลี่ยม</BusList>
-        <BusList>ศาลาที่พักหกเหลี่ยม</BusList>
+        <BusList active>{path[0]}</BusList>
+        <BusList>{path[1]}</BusList>
+        <BusList>{path[2]}</BusList>
       </Container>
     )
   }

@@ -62,7 +62,7 @@ export default class extends Component {
             }
             {searchLocation(this.state.search).length > 0 &&
               searchLocation(this.state.search).map((x, i) => {
-                return <LocationCard data={x} key={i}/>
+                return <LocationCard location={this.props.location} data={x} key={i}/>
               })
             }
           </Padding>

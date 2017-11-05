@@ -5,22 +5,37 @@ import InformationContainer from './containers/information'
 import SearchContainer from './containers/search'
 import './design.css'
 
+import {injectGlobal} from 'styled-components'
 import BusRoutes from './components/BusRoutes'
+import {getCurrentLocation} from './helper'
 
 class App extends React.Component {
-  // page: place, bus_routes, search
   constructor() {
     super()
     this.state = {
-      page: 'place'
+      info: []
+    }
+  }
+  componentWillMount() {
+    let id = (new URL(window.location.href)).searchParams.get('id')
+    let info = getCurrentLocation(id)
+    // if not found info of that id
+    if (info.length === 0) {
+      injectGlobal`
+        body {
+          display: none;
+        }
+      `
+    } else {
+      this.setState({ info })
     }
   }
   render(){
     return (
       <div>
         <BusRoutes />
-        <SearchContainer />
-        <InformationContainer />
+        <SearchContainer location={this.state.info[0].location}/>
+        <InformationContainer data={this.state.info[0]}/>
       </div>
     )
   }

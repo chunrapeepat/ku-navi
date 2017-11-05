@@ -45,20 +45,11 @@ export default class extends Component {
       <div>
         <ImageContainer/>
         <SubInformation><i className="zmdi zmdi-pin"></i> ตอนนี้คุณอยู่ที่</SubInformation>
-        <Heading>Faculty of Engineering อาคารชูชาติ กำภู</Heading>
-        <PlaceDescription>อาคารสนับสนุนและอำนวยการ</PlaceDescription>
-        <BusCard>
-          Whate efer
-        </BusCard>
-        <BusCard>
-          Whate efer
-        </BusCard>
-        <BusCard>
-          Whate efer
-        </BusCard>
-        <BusCard>
-          Whate efer
-        </BusCard>
+        <Heading>{this.props.data.title}</Heading>
+        <PlaceDescription>{this.props.data.description}</PlaceDescription>
+        { this.props.data.bus.map((x, i) => {
+          return <BusCard key={i} data={x} />
+        })}
         <br/>
         <br/>
         <br/>

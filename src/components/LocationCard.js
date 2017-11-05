@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Ink from 'react-ink'
+import {calculateDistance} from '../helper'
 
 const Container = styled.div`
   width: 100%;
@@ -62,7 +63,7 @@ export default (props) => (
   <Container>
     <Padding>
       <Heading>{props.data.title}</Heading>
-      <DescriptionLabel>ระยะทางประมาณ 300 เมตร</DescriptionLabel>
+      <DescriptionLabel>ระยะทางประมาณ {calculateDistance(props.location.lat, props.location.lng, props.data.location.lat, props.data.location.lng)} เมตร</DescriptionLabel>
       <BusLabel>สาย {props.data.bus}</BusLabel>
       <OpenInGoogleMap>
         <a rel="noopener noreferrer"
