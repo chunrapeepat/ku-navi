@@ -24,7 +24,7 @@ const Background = styled.div`
   right: 0;
   background: rgba(0,0,0,0.7);
   padding-top: 5px;
-  z-index: 9999;
+  z-index: 9999999;
   overflow-y: scroll;
   display: ${props => (props.display) ? 'block' : 'none'};
 `

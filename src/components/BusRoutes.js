@@ -8,7 +8,7 @@ import BusRoutesJSON from '../database/bus_routes.json'
 
 const Container = styled.div`
   position: fixed;
-  z-index: 99999;
+  z-index: 999999;
   width: 100%;
   height: calc(100vh - 47px);
   background: white;
