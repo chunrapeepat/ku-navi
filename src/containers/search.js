@@ -1,8 +1,13 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
+import {Padding} from '../helper'
+import LocationCard from '../components/LocationCard'
+
 const SearchInput = styled.input`
   outline: none;
+  position: fixed;
+  z-index: 9999;
   width: calc(100% - 40px);
   border: 0;
   padding: 15px 20px;
@@ -12,42 +17,42 @@ const SearchInput = styled.input`
 `
 
 const Background = styled.div`
-  position: absolute;
+  position: fixed;
   top: 58px;
   left: 0;
   height: calc(100% - 58px);
   right: 0;
   background: rgba(0,0,0,0.5);
   z-index: 9999;
+  overflow-y: scroll;
   display: ${props => (props.display) ? 'block' : 'none'};
 `
 
 export default class extends Component {
-
-  constructor(){
+  constructor() {
     super()
     this.state = {
-      display: false
+      search: '',
     }
   }
-
-  openBackground(){
-    this.setState({ display: true })
+  searchChange(e) {
+    this.setState({ search: e.target.value})
   }
-
-  closeBackground(){
-    this.setState({ display: false })
-  }
-
-  render(){
+  render() {
     return (
       <div>
         <SearchInput
-          onClick={() => this.openBackground()}
+          onChange={this.searchChange.bind(this)}
           placeholder='ค้นหาสถานที่...'/>
-        <Background
-          onClick={() => this.closeBackground()}
-          display={this.state.display}/>
+        <Background display={this.state.search !== ''}>
+          <Padding>
+            <LocationCard />
+            <LocationCard />
+            <LocationCard />
+            <LocationCard />
+            <LocationCard />
+          </Padding>
+        </Background>
       </div>
     )
   }
