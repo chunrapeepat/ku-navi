@@ -31,6 +31,7 @@ const FooterContainer = styled.div`
   bottom: 0;
   background: #006664;
   cursor: pointer;
+  border-top: 5px solid #45BDA4;
 `
 
 export default class extends Component {
@@ -54,6 +55,7 @@ export default class extends Component {
             {BusRoutesJSON.map((bus, i) => {
               return <BusCard no={bus.line} routes={bus.routes} key={i}/>
             })}
+            <br/>
           </Padding>
         </Container>
         <FooterContainer onClick={() => this.toggleBusRoutes()}>

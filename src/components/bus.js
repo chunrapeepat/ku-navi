@@ -11,7 +11,7 @@ const Heading = styled.div`
   padding: 7px 10px;
   border-radius: 5px;
   font-family: 'Kanit', sans-serif;
-  background: #e8f5e9;
+  background: #F8E66E;
   font-size: 18px;
 `
 

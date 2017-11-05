@@ -14,6 +14,9 @@ const SearchInput = styled.input`
   font-size: 18px;
   font-family: 'Kanit', sans-serif;
   border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.55);
+  -moz-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.55);
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.55);
 `
 
 const Background = styled.div`
@@ -22,7 +25,7 @@ const Background = styled.div`
   left: 0;
   height: calc(100% - 58px);
   right: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
   padding-top: 5px;
   z-index: 9999999;
   overflow-y: scroll;

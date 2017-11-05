@@ -11,14 +11,12 @@ const Heading = styled.div`
   font-family: 'Kanit', sans-serif;
   border-radius: 7px;
   padding: 7px 20px;
-  background: #ff5f6d;
-  background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
-  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  background: #FFAB40;
 `
 
 const Element = styled.div`
   margin-top: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
   color: #ccc;
   border-radius: 5px;
   font-family: 'Kanit', sans-serif;

@@ -5,12 +5,8 @@ import BusCard from '../components/bus'
 
 const ImageContainer = styled.div`
   width: 100%;
-  height: 250px;
-  background: url(${props => props.src}) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  height: 115px;
+  background: #2A6564;
 `
 
 const SubInformation = styled.div`
@@ -47,7 +43,7 @@ export default class extends Component {
   render(){
     return (
       <div>
-        <ImageContainer src='https://i.ytimg.com/vi/_J-ZlvlVbZo/maxresdefault.jpg'/>
+        <ImageContainer/>
         <SubInformation><i className="zmdi zmdi-pin"></i> ตอนนี้คุณอยู่ที่</SubInformation>
         <Heading>Faculty of Engineering อาคารชูชาติ กำภู</Heading>
         <PlaceDescription>อาคารสนับสนุนและอำนวยการ</PlaceDescription>
