@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 
 import BusCard from '../components/bus'
-import Footer from '../components/footer'
 
 const ImageContainer = styled.div`
   width: 100%;
@@ -67,7 +66,6 @@ export default class extends Component {
         <br/>
         <br/>
         <br/>
-        <Footer />
       </div>
     )
   }

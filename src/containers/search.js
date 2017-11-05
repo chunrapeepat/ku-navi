@@ -18,6 +18,7 @@ const Background = styled.div`
   height: calc(100% - 58px);
   right: 0;
   background: rgba(0,0,0,0.5);
+  z-index: 9999;
   display: ${props => (props.display) ? 'block' : 'none'};
 `
 
