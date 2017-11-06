@@ -19,6 +19,7 @@ class App extends React.Component {
   componentWillMount() {
     let id = (new URL(window.location.href)).searchParams.get('id')
     let info = getCurrentLocation(id)
+    window.history.replaceState(null, null, window.location.pathname)
     // if not found info of that id
     if (info.length === 0) {
       injectGlobal`

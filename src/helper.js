@@ -41,5 +41,5 @@ export const calculateDistance = (lat1, lon1, lat2, lon2, unit = "M") => {
     dist = dist * 60 * 1.1515
     if (unit==="K") { dist = dist * 1.609344 }
     if (unit==="N") { dist = dist * 0.8684 }
-    return Math.floor(dist / 1609.34)
+    return Math.floor(dist * 1609.34)
 }
